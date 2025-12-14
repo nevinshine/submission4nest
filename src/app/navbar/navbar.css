@@ -1,0 +1,97 @@
+/* --- 1. Navbar Container --- */
+.navbar {
+  background-color: #111111;
+  padding: 1rem 0;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  
+  /* THE CHANGE: Apply the round font here */
+  font-family: 'Nunito', sans-serif; 
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* --- 2. Brand / Icon Area --- */
+.brand-icon {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  text-decoration: none;
+  color: #FFD700;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Bouncy transition */
+}
+
+.brand-icon:hover {
+  transform: scale(1.1); 
+}
+
+.brand-name {
+  font-size: 1.6rem; /* Slightly larger for round fonts */
+  font-weight: 900; /* Extra Bold looks very round */
+  letter-spacing: 1px;
+  color: #ffffff;
+}
+
+/* --- 3. The Round Yellow Buttons --- */
+.nav-buttons {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.yellow-btn {
+  background-color: #FFD700; 
+  color: #000000; 
+  
+  padding: 0.8rem 2rem; /* A bit more padding for a "chunky" look */
+  border-radius: 50px; /* Maximum roundness */
+  
+  font-weight: 800; /* Bold font shows off the rounded edges better */
+  font-size: 1rem;
+  text-decoration: none;
+  /* Removed uppercase to make it look rounder/friendlier */
+  /* text-transform: uppercase; */ 
+  
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Bouncy effect */
+  box-shadow: 0 5px 0 #b39700; /* Chunky 3D shadow */
+  position: relative;
+  border: 2px solid #FFD700; /* Ensures smooth edges */
+}
+
+/* --- 4. Hover & Active Effects --- */
+
+.yellow-btn:hover {
+  background-color: #ffea70; /* Pastel Yellow on hover */
+  transform: translateY(-4px); /* Higher jump */
+  box-shadow: 0 9px 0 #b39700, 0 10px 20px rgba(255, 215, 0, 0.4);
+}
+
+.yellow-btn:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #b39700;
+}
+
+/* Active Link State */
+.yellow-btn.active {
+  background-color: #ffffff;
+  color: #111;
+  border-color: #fff;
+  box-shadow: 0 5px 0 #999;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .yellow-btn {
+    padding: 0.6rem 1.4rem;
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,177 @@
+/* --- 1. Footer Container --- */
+.footer {
+  background-color: #111111; /* Deep Black */
+  color: #ffffff;
+  padding: 4rem 0 1rem 0;
+  font-family: 'Nunito', sans-serif;
+  margin-top: 4rem; /* Separation from content */
+  border-top: 1px solid #222;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.5fr; /* 4 Columns */
+  gap: 3rem;
+}
+
+/* --- 2. Typography --- */
+h4 {
+  color: #FFD700; /* Yellow Headings */
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+}
+
+p {
+  color: #aaa;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* --- 3. Links --- */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 0.8rem;
+}
+
+ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+/* Link Hover: Slide right and turn yellow */
+ul li a:hover {
+  color: #FFD700;
+  transform: translateX(5px);
+}
+
+/* --- 4. Brand Section --- */
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.8rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+/* Social Icons (Round & Bouncy) */
+.social-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  background-color: #222;
+  border-radius: 50%; /* Perfect Circle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 0.8rem;
+  border: 2px solid #222;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.social-icon:hover {
+  background-color: #FFD700;
+  color: #000;
+  border-color: #FFD700;
+  transform: translateY(-5px) scale(1.1); /* Bounce Up */
+}
+
+/* --- 5. Newsletter Form --- */
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.newsletter-form input {
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  border: 2px solid #333;
+  background-color: #1a1a1a;
+  color: white;
+  font-family: 'Nunito', sans-serif;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.newsletter-form input:focus {
+  border-color: #FFD700;
+}
+
+/* The Yellow Button (Same style as Navbar, just smaller) */
+.yellow-btn-small {
+  background-color: #FFD700;
+  color: #000;
+  padding: 0.8rem;
+  border-radius: 50px;
+  border: none;
+  font-weight: 800;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 0 #b39700; /* 3D Shadow */
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.yellow-btn-small:hover {
+  background-color: #ffe033;
+  transform: translateY(-3px);
+  box-shadow: 0 7px 0 #b39700;
+}
+
+.yellow-btn-small:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #b39700;
+}
+
+/* --- 6. Bottom Copyright --- */
+.footer-bottom {
+  text-align: center;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid #222;
+  font-size: 0.8rem;
+  color: #555;
+}
+
+/* --- Mobile --- */
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr; /* Stack everything */
+    text-align: center;
+    gap: 2rem;
+  }
+  
+  .social-links, .footer-logo {
+    justify-content: center;
+  }
+  
+  .newsletter-form {
+    align-items: center; /* Center the form inputs */
+  }
+  
+  .newsletter-form input, .yellow-btn-small {
+    width: 100%;
+    max-width: 300px;
+  }
+}

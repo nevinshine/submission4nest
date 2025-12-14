@@ -1,0 +1,122 @@
+/* CONTAINER */
+.hive-container {
+  background-color: #000;
+  min-height: 100vh; /* Full screen height */
+  padding: 4rem 2rem;
+  color: white;
+}
+
+/* HEADER */
+.header-section {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+h1 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  margin-bottom: 0.5rem;
+}
+.yellow { color: #FFD700; }
+.subtitle { color: #888; font-size: 1.2rem; }
+
+/* GRID LAYOUT */
+.contact-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* LEFT SIDE: Info Card */
+.info-card {
+  flex: 1;
+  min-width: 300px;
+  background-color: #111;
+  padding: 2.5rem;
+  border-radius: 20px;
+  border: 1px solid #333;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #FFD700;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.info-item {
+  margin-bottom: 1.5rem;
+}
+.label {
+  font-size: 0.8rem;
+  color: #666;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.info-item p {
+  font-size: 1.1rem;
+  margin-top: 5px;
+  font-weight: 500;
+}
+
+/* FORM STYLES */
+.contact-form {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.hive-input {
+  background-color: #222;
+  border: 1px solid #444;
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s;
+}
+.hive-input:focus {
+  border-color: #FFD700;
+  background-color: #000;
+}
+.btn-submit {
+  background-color: #FFD700;
+  color: black;
+  border: none;
+  padding: 15px;
+  font-weight: 900;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: transform 0.2s;
+}
+.btn-submit:hover { transform: translateY(-3px); }
+
+/* RIGHT SIDE: Map */
+.map-container {
+  flex: 1.5; /* Map is slightly wider */
+  min-width: 300px;
+  height: 500px; /* Fixed height */
+  border-radius: 20px;
+  overflow: hidden;
+  border: 2px solid #333;
+  filter: grayscale(100%) invert(92%) contrast(83%); /* Cool Dark Mode Map Effect */
+}
+
+/* Make map colorful on hover */
+.map-container:hover {
+  filter: none;
+  border-color: #FFD700;
+  transition: 0.3s;
+}
+/* FORCE NO MARGINS */
+:host {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+}

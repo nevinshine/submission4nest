@@ -1,0 +1,53 @@
+<div class="showcase-wrapper">
+  <div class="content-grid">
+    
+    <div class="text-section">
+      <img src="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=300&auto=format&fit=crop" 
+           class="feature-logo" 
+           alt="Feature Ingredient">
+
+      <h2>HIVE <span class="text-yellow">BEAUTY</span></h2>
+      <p>
+        Premium gear for your skin. Designed for the modern explorer. 
+        Dark, bold, and effective.
+      </p>
+
+      <a routerLink="/products" class="btn-yellow">Shop Collection</a>
+    </div>
+
+    <div class="carousel-container">
+      
+      <button class="arrow prev" (click)="prevSlide()">&#10094;</button>
+      <button class="arrow next" (click)="nextSlide()">&#10095;</button>
+
+      <div class="slide" [class.active]="activeIndex === 0">
+        <img src="https://lazarusinnovatives.com/cdn/shop/files/IMG_2235_1800x1800.jpg?v=1737876092" 
+             alt="Obsidian Scrub">
+        <div class="slide-caption">
+          <h3>Obsidian Scrub</h3>
+          <span>Exfoliate the darkness.</span>
+        </div>
+      </div>
+
+      <div class="slide" [class.active]="activeIndex === 1">
+        <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=800&auto=format&fit=crop" 
+             alt="Gold Eye Serum">
+        <div class="slide-caption">
+          <h3>Gold Eye Serum</h3>
+          <span>Brightness in the shadow.</span>
+        </div>
+      </div>
+
+      <div class="slide" [class.active]="activeIndex === 2">
+        <img src="https://images.unsplash.com/photo-1586495777744-4413f21062fa?q=80&w=800&auto=format&fit=crop" 
+             alt="Midnight Lip">
+        <div class="slide-caption">
+          <h3>Midnight Lip</h3>
+          <span>Bold. Unapologetic.</span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>

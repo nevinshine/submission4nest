@@ -1,0 +1,4 @@
+.main-content {
+  min-height: 80vh; /* Ensures content area is tall enough */
+  background-color: #ffffff; /* Or a light gray like #f9f9f9 */
+}

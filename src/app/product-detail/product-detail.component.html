@@ -1,0 +1,45 @@
+<div class="detail-container" *ngIf="product; else loading">
+  
+  <div class="detail-grid">
+    
+    <div class="image-section">
+      <img [src]="product.thumbnail" [alt]="product.title">
+      
+      <div class="mini-gallery" *ngIf="product.images">
+        <img *ngFor="let img of product.images.slice(0,3)" [src]="img">
+      </div>
+    </div>
+
+    <div class="info-section">
+      <span class="badge">{{ product.category }}</span>
+      
+      <h1>{{ product.title }}</h1>
+      <p class="brand">By <span class="text-yellow">{{ product.brand }}</span></p>
+      
+      <div class="rating">
+        RATING: <span class="text-yellow">{{ product.rating }} / 5</span>
+      </div>
+
+      <p class="description">{{ product.description }}</p>
+
+      <div class="price-box">
+        <span class="price">${{ product.price }}</span>
+        <span class="discount" *ngIf="product.discountPercentage">
+          -{{ product.discountPercentage }}%
+        </span>
+      </div>
+
+      <div class="actions">
+        <button class="btn-buy">ADD TO CART</button>
+        <button class="btn-back" routerLink="/products">BACK TO SHOP</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<ng-template #loading>
+  <div class="loading-box">
+    <h1>LOADING</h1><h1> (Press Load if loading takes too long.)...</h1>
+  </div>
+</ng-template>

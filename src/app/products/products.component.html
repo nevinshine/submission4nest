@@ -1,0 +1,24 @@
+<div class="hive-container">
+  <h1 class="page-title">HIVE <span class="yellow">COLLECTION</span></h1>
+  
+  <div class="product-grid">
+    <div class="product-card" *ngFor="let product of products">
+      <div class="card-image">
+        <img [src]="product.thumbnail" [alt]="product.title">
+        <span class="category-tag">{{ product.category }}</span>
+      </div>
+      
+      <div class="card-content">
+        <h3>{{ product.title }}</h3>
+        <p class="desc">{{ product.description | slice:0:60 }}...</p>
+        
+        <div class="card-footer">
+          <span class="price">${{ product.price }}</span>
+<button class="btn-view" routerLink="/products/{{ product.id }}">
+  View Details
+</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
